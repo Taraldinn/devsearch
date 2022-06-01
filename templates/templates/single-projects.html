@@ -1,0 +1,70 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+    <section>
+        <div class=" flex flex-col items-center px-5 py-8 mx-auto lg:px-24">
+            <div>
+
+                        <div>
+                              <img class="object-fill h-48 w-[1200px] h-[630px] " src="{{ project.featured_image.url }}">
+                        </div>
+                <div class="flex flex-wrap py-4 md:flex-nowrap">
+                    <div class="flex flex-col flex-shrink-0 px-0 mb-6 md:w-64 md:mb-0 pt-7">
+                        <div class="p-6">
+                            <div>
+
+                                {% for tag in project.tags.all %}
+
+
+
+                                    <button class="px-2 py-1 text-xs font-semibold font-mono text-white uppercase transition-colors duration-200 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">{{ tag }}</button>
+
+
+                                {% endfor %}
+
+                                <p class="font-mono text-blue-600 font-bold mt-2.5">
+                                    <a href="{{ project.source_link }}" class="flex"><span>Project Source</span>
+
+                                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                     <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                     </svg></span>
+
+                                    </a>
+
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="w-max px-4 mt-12 prose lg:px-0 lg:w-3/4">
+
+                        <div class="mb-5 border-b border-gray-200">
+                            <div class="flex flex-wrap items-baseline -mt-2">
+                                <h5>12-03-2021</h5>
+                                <p class="mt-1 ml-2">Transitions</p>
+                            </div>
+                        </div>
+                        {{ project.description }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    {#Todo: https://app.tailwinduikit.com/listing/webapp/layout/grid_card/full_width_user_profile_card#}
+
+
+
+
+
+{% endblock content %}

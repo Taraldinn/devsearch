@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
+django-tailwind = "*"
+cloudinary = "*"
+crispy-tailwind = "*"
+django-tinymce = "*"
 
 [dev-packages]
 

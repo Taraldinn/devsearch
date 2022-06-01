@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .input_title {
+        @apply w-full p-3 mt-4 border border-gray-300 rounded outline-none focus:bg-gray-50;
+    }
+}
